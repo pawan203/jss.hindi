@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            border: 2px solide black;
+            background-color: rgb(46, 44, 44);
+            height: 45px;
+            width: 100vw;
+            justify-content: center;
+            align-content: space-between;
+            padding-top: 15px;
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+            padding: 18px 100px;
+            font-weight: bold;
+            font-size: 25px;
+        
+        }
+        li a:hover{
+            color: dimgray;
+        }
+        li{
+            list-style: none;
+        }
+        ul li {
+            text-decoration: none;
+            font-size: large;
+        }
+        h1{ 
+            margin: 18px 29px;
+            text-align: center;
+        
+        }
+        button{
+            height: 70px;
+            width: 70px;
+           
+        }
+        #grey{
+    background-color: gray;
+    
+        }
+        #blue{
+            background-color: blue;
+        }
+        #orange{
+            background-color: orange;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #purple{
+            background-color: purple;
+        }
+        #brown{
+            background-color: brown;
+
+        }
+        #white{
+            background-color: white;
+        }
+        #pink{
+            background-color: rgb(158, 32, 53);
+        }
+        #black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li ><a href="">Home</a></li>
+        <li ><a href="https://www.youtube.com/shorts/W9XwJcyGJq8" target="_blank">Youtube</a></li>
+    </ul>
+    <h1> Color Scheme Switcher </h1>
+    <div class="button">
+<span><button id="grey"></button></span>
+<span><button id="blue"></button></span>
+<span><button id="orange"></button></span>
+<span><button id="yellow"></button></span>
+<span><button id="purple"></button></span>
+<span><button id="brown"></button></span>
+<span><button id="white"></button></span>
+<span><button id="pink"></button></span>
+<span><button id="black"></button></span>
+</div>
+</body>
+<script>
+    const button =document.querySelectorAll(".button")
+const body= document.querySelector("body")
+
+button.forEach(function (button) {
+    button.addEventListener("click", function(e) {
+        console.log(e)
+        console.log(e.target)
+        if (
+            e.target.id === "grey"
+        ) {
+            body.style.backgroundColor = 'grey'
+        }
+        if (
+            e.target.id === "blue"
+        ) {
+            body.style.backgroundColor = 'blue'
+        }
+        if (
+            e.target.id === "orange"
+        ) {
+            body.style.backgroundColor = 'orange'
+        }
+        if (
+            e.target.id === "yellow"
+        ) {
+            body.style.backgroundColor = 'yellow'
+        }
+        if (
+            e.target.id === "purple"
+        ) {
+            body.style.backgroundColor = 'purple'
+        }
+        if (
+            e.target.id === "brown"
+        ) {
+            body.style.backgroundColor = 'brown'
+        }
+        if (
+            e.target.id === "white"
+        ) {
+            body.style.backgroundColor = 'white'
+        }
+        if (
+            e.target.id === "pink"
+        ) {
+            body.style.backgroundColor = 'rgb(158, 32, 53)'
+        }
+        if (
+            e.target.id === "black"
+        ) {
+            body.style.backgroundColor = 'black'
+        }
+    })
+    
+})
+
+</script>
+<script src="./index.js" async></script>
+</html>
