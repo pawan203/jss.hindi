@@ -1,1 +1,1 @@
-# jss.hindi
+prectice projects
