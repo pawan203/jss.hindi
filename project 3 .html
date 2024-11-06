@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+</head>
+<Style>
+    .container{
+        text-align: center;
+    }
+    body{
+        background-color: black;
+        color: white;
+    }
+#clocks{
+        border: 2px solid rgb(6, 148, 53);
+        height: 52px;
+        width: 112px;
+        background-color: rgb(5, 48, 5);
+        color: white;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+</Style>
+<body>
+    <div class="container">
+
+        <h1>CLOCK</h1>
+        <div id="clocks"> </div>
+       
+    </div>
+    
+</body>
+<script>
+    const clock =document.getElementById('clock');
+    
+
+    setInterval(function() {
+        let date = new Date();
+        // console.log(date.toLocaleTimeString());
+        clocks.innerHTML=date.toLocaleTimeString()
+        
+    }, 1000);
+
+
+</script>
+</html>
