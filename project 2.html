@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<style>
+    body{ background-color: grey;
+    font-size: 25px;
+    }
+    .container{
+        text-align: center;
+        
+    }
+    h1{
+        text-align: center;
+      
+        padding: 14px;
+    }
+    button{
+        padding: 8px 28px;
+    
+        
+    }
+    #weightguide{
+        padding-top: 20px;
+        font-weight: bold;
+        font-size: 34px;
+    }
+    #result{
+        padding-top: 12px;
+        color: black;
+        font-weight: bold;
+        font-size: 22px;
+        
+    }
+
+</style>
+<body>
+    <div class="container">
+        <form>
+            <h1> BMI CALCULATOR</h1>
+    <p><label>Height in CM: </label><input type="text" id="height" ></p>
+    <p><label>Weight in KG: </label><input type="text" id="weight" ></p>
+     <button >CALCULATE</button>
+
+     <div id="result"></div>
+    
+     <div id="weightguide"> BMI WEIGHT GUIDE</div>
+     <p> Below 18.5	Underweight    </p>
+     <p>18.5—24.9	Healthy Weight</p>
+     <p>25.0—29.9	Overweight</p>
+    <p>30.0 and Above	Obesity</p>
+
+
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (e) {
+         e.preventDefault();
+
+        const height = parseInt(document.querySelector('#height').value);
+        const weight = parseInt(document.querySelector('#weight').value);
+        const result = document.querySelector('#result')
+        const BMI = document.querySelector('#BMi')
+         
+        if (height === "" || height < 0  || isNaN(height)) {
+           result.innerHTML=` PLEASE ENTER A VALID HEIGHT ${height}`
+        }
+        else if (weight=== "" || weight < 0  || isNaN(weight)) {
+           result.innerHTML=` PLEASE ENTER A VALID WEIGHT ${weight}`
+        }
+       else { 
+          const bmi = (weight / ((height * height) / 10000)).toFixed(2)
+           result.innerHTML= `<span>${bmi}</span>`
+       }
+      
+       
+      
+        })
+    
+
+
+    </script>
+
+</body>
+</html>
